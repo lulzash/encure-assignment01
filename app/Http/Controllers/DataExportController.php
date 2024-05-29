@@ -42,7 +42,6 @@ class DataExportController extends Controller
                 $allIds = $allIds->merge($ids);
                 $start += $rows;
                 dump("Fetched {$start} records");
-                file_put_contents('ids.txt', implode("\n", $ids->all()), FILE_APPEND);
             } else {
                 break;
             }
